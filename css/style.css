@@ -66,13 +66,29 @@ body {
   padding: 32px 0px;
   align-items: baseline;
 }
-
 .menu-list:not(:last-child) {
   padding-right: 50px;
 }
 
+li.menu-list {
+  position: relative;
+}
+.line::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 50px;
+  bottom: -25px;
+  height: 4px;
+  background-color: var(--accent-color);
+}
+
+/* .menu-list::before {
+  right: 50px;
+} */
 .contact {
-  margin-left: 331px;
+  margin-left: 243px;
 }
 
 .icon-contact:hover,
@@ -100,6 +116,27 @@ body {
 .address-contact:hover,
 .address-contact:focus {
   color: var(--accent-color);
+}
+.box-foto {
+  position: relative;
+  width: 370px;
+  height: 294px;
+}
+.box-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.box-hover:hover {
+  background-color: var(--accent-color);
+  opacity: 1;
+}
+.text-hover {
+  padding: 63px 24px;
+  color: var(--wite-color);
 }
 
 .btn:hover,
